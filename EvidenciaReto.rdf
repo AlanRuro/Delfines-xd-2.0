@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9/"
+     xml:base="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#controla -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#controla">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#es_controlado_por"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Peatonal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Vehicular"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Control_De_Trafico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Peatones"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#es_controlado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#es_controlado_por">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Control_De_Trafico"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Peatones"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Peatonal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Vehicular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Agente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Agente">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#es_controlado_por"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Peatones"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Autobus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Autobus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Camion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Camion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Camioneta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Camioneta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Carro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Carro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Control_De_Trafico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Control_De_Trafico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Agente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Gato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Gato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Mascotas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Hombre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Hombre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Personas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Mascotas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Mascotas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Peatones"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Mujer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Mujer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Personas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Peatones -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Peatones">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#es_controlado_por"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Peatonal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Agente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Perro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Perro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Mascotas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Personas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Personas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Peatones"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Peatonal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Peatonal">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#controla"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Peatones"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Control_De_Trafico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Vehicular -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Vehicular">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#controla"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Control_De_Trafico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Tractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Tractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Vehiculo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#es_controlado_por"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Semaforo_Vehicular"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/diegopartida/ontologies/2023/8/untitled-ontology-9#Agente"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
